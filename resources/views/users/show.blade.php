@@ -11,6 +11,10 @@
                                 
                         <label>Name: </label> {{$user->name}} <br>
                         <label>Email: </label> {{$user->email}}
+                        Created At: {{ $user->created_at }}  <br>
+                        Image: 
+
+                        <img src="{{ asset('/storage/img/'.$user->img) }}">
 
                         </div>
                     </div>
