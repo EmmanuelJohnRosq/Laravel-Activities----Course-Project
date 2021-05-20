@@ -44,10 +44,6 @@ class CommentController extends Controller
         $input = $request->all();
         $input['user_id'] = auth()->user()->id;
         $input['parent_id'] = isset($request->parent_id) ? $request->parent_id : '';
-    
-        // $comment =  new Comment();
-        // $comment->fill($input);
-        // $comment->save();
 
         Comment::create($input);
 
